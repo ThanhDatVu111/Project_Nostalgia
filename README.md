@@ -1,7 +1,7 @@
 # Project_Nostalgia
 Project Nostalgia is a captivating venture that blends classic gaming nostalgia with modern programming skills. Utilizing the Pygame library, this project aims to recreate three iconic video games: Space Invader, Flappy Bird, and Tetris. Each game will be faithfully reproduced, preserving the original gameplay mechanics and visual aesthetics while leveraging the flexibility and power of Python.
 
-#Output
+# Output
 https://www.youtube.com/watch?v=glKAQbMGWf4
 
 # Key Features:
