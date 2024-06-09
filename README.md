@@ -31,9 +31,13 @@ Navigation: Easily switch between games or exit to the main menu using in-game o
 
 # Implementation Details:
 Object-Oriented Programming (OOP): Leverage OOP principles to create reusable and modular code.
+
 Collision Detection: Implement precise collision detection mechanisms for all games.
+
 Grid Design: Utilize a grid-based layout, particularly in Tetris, for accurate piece placement and movement.
+
 User Interface Design: Develop an intuitive and visually appealing UI to enhance the user experience.
+
 Point Logic: Implement point scoring systems for all games to track player progress and high scores.
 
 # Technologies Used:
