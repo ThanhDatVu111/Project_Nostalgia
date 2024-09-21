@@ -59,10 +59,13 @@ git clone https://github.com/thanhdatvu111/project_nostalgia.git
 cd project_nostalgia
 
 Set Up Pygame: Ensure you have Pygame installed. You can install it using pip:
+
 pip install pygame
 
 Run the Application: 
+
 cd GameMenu
+
 python3 main.py
 
 ## 🏗️ Contributing
