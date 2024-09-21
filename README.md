@@ -61,8 +61,9 @@ cd project_nostalgia
 Set Up Pygame: Ensure you have Pygame installed. You can install it using pip:
 pip install pygame
 
-Run the Application: Launch the game by running the main file:
-python main_menu.py
+Run the Application: 
+cd GameMenu
+python3 main.py
 
 ## 🏗️ Contributing
 Contributions are welcome! Whether it's adding new features, fixing bugs, or improving the code, feel free to fork the repository, make changes, and submit a pull request.
