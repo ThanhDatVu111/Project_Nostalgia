@@ -17,8 +17,8 @@ class Game:
 		self.blink_timer = 0
 		self.blink_interval = 500 #blink img every 500ms
 		# Load the sound
-		self.clear_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/Tetris/Sound/Sounds_clear.ogg") 
-		self.rotates_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/Tetris/Sound/Sounds_rotate.ogg") 
+		self.clear_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Sound/Sounds_clear.ogg") 
+		self.rotates_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Sound/Sounds_rotate.ogg") 
 
 	def update_score(self, lines_cleared, move_down_points):
 		if lines_cleared == 1:

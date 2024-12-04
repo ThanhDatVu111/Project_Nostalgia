@@ -10,13 +10,13 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Game Menu")
-bg_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/GameMenu/Graphic/bg.png")
+bg_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/Graphic/bg.png")
 
 def get_font(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font("/Users/datvu/Documents/Project_Nostalgia/GameMenu/Graphic/font.ttf", size)
+    return pygame.font.Font("/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/Graphic/font.ttf", size)
 
 # Load the sound
-pygame.mixer.music.load("/Users/datvu/Documents/Project_Nostalgia/GameMenu/Sound/bg.mp3")
+pygame.mixer.music.load("/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/Sound/bg.mp3")
 pygame.mixer.music.play(-1)  # -1 means loop indefinitely
 def main_menu():
     while True:
@@ -41,13 +41,13 @@ def main_menu():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if flappy_bird_button.checkForInput(mouse_pos):
-                    Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/FlappyBird/flappy_bird.py"])
+                    Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/flappy_bird.py"])
                     return
                 if tetris_button.checkForInput(mouse_pos):
-                    Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/Tetris/tetris_main.py"])
+                    Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/tetris_main.py"])
                     return
                 if space_invader_button.checkForInput(mouse_pos):
-                    Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/spa_inv_main.py"])
+                    Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/spa_inv_main.py"])
                     return
                 if quit_button.checkForInput(mouse_pos):
                     pygame.quit()

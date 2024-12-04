@@ -7,7 +7,7 @@ class Spaceship(pygame.sprite.Sprite):
         ship_self.screen_width = SCREEN_WIDTH
         ship_self.screen_height = SCREEN_HEIGHT
         ship_self.offset = OFFSET
-        original_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/ship_trans.png").convert_alpha()
+        original_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/ship_trans.png").convert_alpha()
         new_size = (90, 90)  #Adjust the size
         ship_self.image = pygame.transform.scale(original_image, new_size) # Scale the original image to the new size
         ship_self.rect = ship_self.image.get_rect(midbottom = ((ship_self.screen_width + ship_self.offset)/2, ship_self.screen_height - 20)) 
@@ -17,7 +17,7 @@ class Spaceship(pygame.sprite.Sprite):
         ship_self.lazer_ready = True
         ship_self.lazer_time = 0
         ship_self.lazer_delay = 300
-        ship_self.shoot_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Sound/laser.ogg")
+        ship_self.shoot_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Sound/laser.ogg")
 
     def get_user_input(ship_self):
         key_pressed = pygame.key.get_pressed()     

@@ -25,7 +25,7 @@ class Game:
         game_self.explosion_group = pygame.sprite.Group()
         game_self.live_remain = 5
         game_self.run = True
-        game_self.game_over_img = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/game_over.png").convert_alpha()
+        game_self.game_over_img = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/game_over.png").convert_alpha()
         game_self.game_over_img = pygame.transform.scale(game_self.game_over_img, (400,400))
         game_self.restart_button = Button((SCREEN_WIDTH - 120)/2 + 20, SCREEN_HEIGHT - 350, "restart1") #create restart button with pos x, y for rect
         game_self.exit_button = Button((SCREEN_WIDTH - 120)/2 + 20, SCREEN_HEIGHT - 280, "exit1")
@@ -35,9 +35,9 @@ class Game:
         game_self.score = 0
         game_self.highscore = 0
         game_self.load_highest_score() #load from high_score.txt file for the last highest score
-        game_self.explosion_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Sound/explosion.ogg")
-        game_self.hit_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Sound/hit.wav")
-        game_self.mshit_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Sound/ms.wav")
+        game_self.explosion_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Sound/explosion.ogg")
+        game_self.hit_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Sound/hit.wav")
+        game_self.mshit_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Sound/ms.wav")
 
 
     def create_obstacles(game_self):

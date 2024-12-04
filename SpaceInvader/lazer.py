@@ -3,7 +3,7 @@ import pygame
 class Lazer(pygame.sprite.Sprite):
     def __init__(lazer_self, postition, speed, screen_height):
         super().__init__() #invoke the constructor of the parent class.
-        original_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/laser.png").convert_alpha()
+        original_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/laser.png").convert_alpha()
         new_size = (20, 20)  #Adjust the size
         lazer_self.image = pygame.transform.scale(original_image, new_size) # Scale the original image to the new size
         lazer_self.rect = lazer_self.image.get_rect(center = postition)

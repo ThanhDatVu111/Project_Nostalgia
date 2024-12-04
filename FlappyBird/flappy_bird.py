@@ -15,11 +15,11 @@ game_screen = pygame.display.set_mode(window_dimension) #create a window for gam
 pygame.display.set_caption("꒰ঌ( •ө• )໒꒱ FLAPPY BIRD ꒰ঌ( •ө• )໒꒱") #set the window title
 
 #back_ground and frame_rate set up
-game_background = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/flappy_bg.png")
-ground_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/ground1.png")
-restart_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/restart.png")
-start_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/start.png")
-exit_image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/exit.png")
+game_background = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/flappy_bg.png")
+ground_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/ground1.png")
+restart_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/restart.png")
+start_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/start.png")
+exit_image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/exit.png")
 
 ground_scroll = 0
 scroll_speed = 4
@@ -40,7 +40,7 @@ score = 0
 pass_pipe = False
 
 #define fond and render text function
-font = pygame.font.Font("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/font.ttf", 40)
+font = pygame.font.Font("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/font.ttf", 40)
 white = (255, 255, 255)
 def animated_text(text, font, color, x, y):
     text_image = font.render(text, True, color)
@@ -55,10 +55,10 @@ def reset_game():
 	return reset_score
 
 # Load the sound
-jump_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Sound/flap.mp3") 
-point_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Sound/point.mp3") 
-die_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Sound/die.mp3") 
-hit_sound = pygame.mixer.Sound("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Sound/hit.mp3") 
+jump_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Sound/flap.mp3") 
+point_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Sound/point.mp3") 
+die_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Sound/die.mp3") 
+hit_sound = pygame.mixer.Sound("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Sound/hit.mp3") 
 
 #Bird setup ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Bird(pygame.sprite.Sprite): #pygame.sprite.Sprite is a base class for creating sprite objects
@@ -69,7 +69,7 @@ class Bird(pygame.sprite.Sprite): #pygame.sprite.Sprite is a base class for crea
         bird.index = 0
         bird.counter = 0
         for i in range(1,4):
-            image = pygame.image.load(f"/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/bird{i}.png")
+            image = pygame.image.load(f"/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/bird{i}.png")
             bird.images_list.append(image)
         bird.image = bird.images_list[bird.index] #first picture in the list
         bird.rect = bird.image.get_rect()
@@ -116,7 +116,7 @@ class Bird(pygame.sprite.Sprite): #pygame.sprite.Sprite is a base class for crea
 class Pipe(pygame.sprite.Sprite): #pygame.sprite.Sprite is a base class for creating sprite objects
     def __init__(pipe, x, y, position):
         pygame.sprite.Sprite.__init__(pipe)
-        pipe.image = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Graphic/pipe.png") #load pipe picture
+        pipe.image = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Graphic/pipe.png") #load pipe picture
         pipe.rect = pipe.image.get_rect() #create dimension for pipe
         #position = 0 => top, position = 1 => bottom
         if position == 0: #top
@@ -157,7 +157,7 @@ scaled_exit_image = pygame.transform.scale(exit_image, (110, 40))
 exit_button = Button((screen_width / 2) - 50, (screen_height / 2) - 50, scaled_exit_image) #create restart button 
 
 # Load background music
-pygame.mixer.music.load("/Users/datvu/Documents/Project_Nostalgia/FlappyBird/Sound/Underwater Theme.mp3")
+pygame.mixer.music.load("/Users/datvu/Desktop/Project/Project_Nostalgia/FlappyBird/Sound/Underwater Theme.mp3")
 pygame.mixer.music.play(-1)  # -1 means loop indefinitely
 
 #game loop
@@ -230,7 +230,7 @@ while run_time:
             score = reset_game() #run reset game and return reset_score to the score
 
         if exit_button.draw_and_pressed() == True:
-            Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/GameMenu/main.py"])
+            Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/main.py"])
             pygame.quit() #Pygame modules are properly cleaned up and resources are released to prevent memory leak
                
     for i in pygame.event.get(): #retrieves all the messages and events that are currently in the event queue

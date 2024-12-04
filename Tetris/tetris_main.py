@@ -6,7 +6,7 @@ from colors import Colors
 
 pygame.init() 
 def get_font(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font("/Users/datvu/Documents/Project_Nostalgia/Tetris/Graphic/font.ttf", size)
+    return pygame.font.Font("/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Graphic/font.ttf", size)
 
 title_surface = get_font(30).render("Tetris", True, Colors.white)
 next_surface = get_font(20).render("Next", True, Colors.white)
@@ -20,9 +20,9 @@ screen = pygame.display.set_mode((560, 690)) #start at 360
 pygame.display.set_caption("Tetris")
 
 # Load the image
-image_side = pygame.image.load('/Users/datvu/Documents/Project_Nostalgia/Tetris/Graphic/tetris_bg.png')
+image_side = pygame.image.load('/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Graphic/tetris_bg.png')
 new_size = (370, 220)  #Adjust the size
-game_over_image = pygame.image.load('/Users/datvu/Documents/Project_Nostalgia/Tetris/Graphic/over.png')
+game_over_image = pygame.image.load('/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Graphic/over.png')
 new_size = (250, 250)  #Adjust the size
 game_over_image = pygame.transform.scale(game_over_image, new_size)
 
@@ -37,7 +37,7 @@ GAME_UPDATE = pygame.USEREVENT #custom event
 pygame.time.set_timer(GAME_UPDATE, 250)
 
 #set up music 
-pygame.mixer.music.load("/Users/datvu/Documents/Project_Nostalgia/Tetris/Sound/bg_music.mp3")
+pygame.mixer.music.load("/Users/datvu/Desktop/Project/Project_Nostalgia/Tetris/Sound/bg_music.mp3")
 pygame.mixer.music.play(-1)
 
 while True:
@@ -80,7 +80,7 @@ while True:
             game.run = True
             game.reset()
         if exit_button.button_pressed_draw() == True:
-            Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/GameMenu/main.py"])
+            Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/main.py"])
             pygame.quit()
 
     pygame.display.update()

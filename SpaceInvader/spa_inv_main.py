@@ -8,7 +8,7 @@ SCREEN_HEIGHT = 700
 OFFSET = 50
 WHITE = (255, 255, 255)
 
-font = pygame.font.Font("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/font.ttf", 20)
+font = pygame.font.Font("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/font.ttf", 20)
 level_msg = font.render("LEVEL 1", False, WHITE)
 credit_msg = font.render("Creator: Thanh Dat Vu", False, WHITE)
 score_msg = font.render("SCORE", False, WHITE)
@@ -20,7 +20,7 @@ pygame.display.set_caption("🚀🛸 SPACE INVADER 🛸🚀")
 FPS = 60
 game_clock = pygame.time.Clock()
 game = Game(SCREEN_WIDTH, SCREEN_HEIGHT, OFFSET, game_clock)
-bg = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/space_bg.png")
+bg = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/space_bg.png")
 
 SHOOT_LAZER = pygame.USEREVENT #USEREVENT help me to create my own event in this game
 pygame.time.set_timer(SHOOT_LAZER, 300) # trigger this SHOOT_LAZER every 300 milliseconds. 
@@ -28,7 +28,7 @@ pygame.time.set_timer(SHOOT_LAZER, 300) # trigger this SHOOT_LAZER every 300 mil
 MYSTERY_SHIP_SPAWN = pygame.USEREVENT + 1 #create a new event ID that is distinct from the one represented by pygame.USEREVENT
 pygame.time.set_timer(MYSTERY_SHIP_SPAWN, random.randint(4000,8000)) #trigger ms spawn every 4 to 8 seconds. 
 
-pygame.mixer.music.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Sound/bg.mp3")
+pygame.mixer.music.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Sound/bg.mp3")
 pygame.mixer.music.play(-1)
 
 #game loop
@@ -62,7 +62,7 @@ while True:
         game_screen.blit(credit_msg, (200, 750, 50, 50))
 
     x = 50
-    spaceship_life = pygame.image.load("/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/spaceship_life.png").convert_alpha()
+    spaceship_life = pygame.image.load("/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/spaceship_life.png").convert_alpha()
     for life in range(game.live_remain):
         game_screen.blit(spaceship_life, (x, 745))
         x += 50
@@ -96,7 +96,7 @@ while True:
             game.reset()
         if game.exit_button.button_pressed() == True:
             game.run = False
-            Popen(["python3", "/Users/datvu/Documents/Project_Nostalgia/GameMenu/main.py"])
+            Popen(["python3", "/Users/datvu/Desktop/Project/Project_Nostalgia/GameMenu/main.py"])
             pygame.quit()
 
     pygame.display.update()

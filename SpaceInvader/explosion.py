@@ -5,7 +5,7 @@ class Explosion(pygame.sprite.Sprite):
         super().__init__()
         explosion_self.images = [] #list to hold explosion image
         for i in range(1, 6): # 1 to 5
-            org_img = pygame.image.load(f"/Users/datvu/Documents/Project_Nostalgia/SpaceInvader/Graphic/exp{i}.png")
+            org_img = pygame.image.load(f"/Users/datvu/Desktop/Project/Project_Nostalgia/SpaceInvader/Graphic/exp{i}.png")
             if size == 1:
                 explosion_img = pygame.transform.scale(org_img, (20, 20))
             if size == 2:
